@@ -1,3 +1,11 @@
+### 1.5.0: 20 Jun 2022
+* Add bundling for web enablement - thanks @tanhakabir
+* Bump all dependencies
+* Changed activation events
+
+### 1.4.11: 20 Mar 2019
+* Add null and handle empty array for language types.
+
 ### 1.4.10: 20 Mar 2019
 * Update to version 1.9.0 of `js-beautify`
 
