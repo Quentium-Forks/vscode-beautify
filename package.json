@@ -21,8 +21,8 @@
     "theme": "light"
   },
   "license": "MIT",
-  "main": "./extension",
-  "browser": "./dist/web/extension.js",
+  "main": "./out/extension.js",
+  "browser": "./out/extension.js",
   "contributes": {
     "languages": [
       {
@@ -231,7 +231,6 @@
     "webpack-cli": "^4.8.0"
   },
   "scripts": {
-    "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test",
     "compile-web": "webpack --config ./build/web-extension.webpack.config.js",
     "watch-web": "webpack --watch --config ./build/web-extension.webpack.config.js",

@@ -125,7 +125,7 @@ function set_file_editorconfig_opts(file, config) {
         config.eol = '\r\n';
       }
     }
-  } catch (e) {}
+  } catch (e) { }
 }
 
 const getWorkspaceRoot = doc => {
@@ -155,7 +155,7 @@ module.exports = async (doc, type, formattingOptions) => {
         else configFile = path.resolve(root, beautify_config);
 
         try {
-          await vscode.workspace.fs.stat(configFile)
+          await vscode.workspace.fs.stat(configFile);
         } catch {
           configFile = null;
         }
@@ -169,14 +169,14 @@ module.exports = async (doc, type, formattingOptions) => {
     configFile = path.join(os.homedir(), '.jsbeautifyrc');
 
     try {
-      await vscode.workspace.fs.stat(configFile)
+      await vscode.workspace.fs.stat(configFile);
     } catch {
       return Promise.resolve(opts);
     }
   }
   return new Promise((resolve, reject) => {
     return vscode.workspace.fs.readFile(configFile).then(d => {
-      if(!d || !d.length) return resolve(opts);
+      if (!d || !d.length) return resolve(opts);
       try {
         const unCommented = dropComments(d.toString());
         opts = JSON.parse(unCommented);
@@ -188,7 +188,7 @@ module.exports = async (doc, type, formattingOptions) => {
         reject();
       }
     }, error => {
-      reject()
-    })
+      reject();
+    });
   });
 };

@@ -12,14 +12,14 @@ const dumpError = e => {
 
 const getBeautifyType = () => {
   return vscode.window.showQuickPick(
-      [
-        { label: 'JS', description: 'Does JavaScript and JSON' },
-        { label: 'CSS', description: 'Does CSS and SCSS' },
-        { label: 'HTML' }
-      ], {
-        matchOnDescription: true,
-        placeHolder: 'Couldn\'t determine type to beautify, please choose.'
-      })
+    [
+      { label: 'JS', description: 'Does JavaScript and JSON' },
+      { label: 'CSS', description: 'Does CSS and SCSS' },
+      { label: 'HTML' }
+    ], {
+    matchOnDescription: true,
+    placeHolder: 'Couldn\'t determine type to beautify, please choose.'
+  })
     .then(choice => {
       if (!choice || !choice.label) throw 'no beautify type selected';
       return choice.label.toLowerCase();
@@ -134,8 +134,8 @@ class Formatters {
       if (css) cfg.css = { ext: css };
       if (html) cfg.html = { ext: html };
       vscode.window.showInformationMessage(
-          '`beautify.*Files` setting is deprecated. please use `beautify.language` instead. Open settings ->',
-          'Global', 'Workspace')
+        '`beautify.*Files` setting is deprecated. please use `beautify.language` instead. Open settings ->',
+        'Global', 'Workspace')
         .then(open => {
           if (open) vscode.commands.executeCommand(`workbench.action.open${open}Settings`);
         }, dumpError);

@@ -73,7 +73,7 @@
 * Add `preserve_newlines` to schema for `css`.
 * Fix `beautify.config` complaining about string (path) value.
 * Add schema reference for VS Code settings of `beautify.config`.
-  * *Note:* For now, this will show some out of date settings, and all settings under the root, `js`, `css` and `html` parts. A PR has been submitted to [schemastore.org](http://schemastore.org) which will update and allow the correct seperation of settings once approved.
+  * *Note:* For now, this will show some out of date settings, and all settings under the root, `js`, `css` and `html` parts. A PR has been submitted to [schemastore.org](http://schemastore.org) which will update and allow the correct separation of settings once approved.
 * Fix default copy of `max_preserve_newlines` from VS Code settings
 * Fix bug where `beautify.config = null` would cause beautify to clear files when not working within a folder.
 * Allow `.jsbeautifyrc` settings object under `beautify.config` instead of file.
@@ -137,7 +137,7 @@
 * Fix [Issue #14: Full file beautify doubles text on version 1.1.0](https://github.com/HookyQR/VSCodeBeautify/issues/14)
 * Add tests for supported formats and nested settings.
 * Cosmetic changes to readme/icon
-* Beautify with no .jsbeautifyrc file in path tree will use workspace settings for tabs/spaces indent. [Issue #11](https://github.com/HookyQR/VSCodeBeautify/issues/11)<br>Will use the editor setting if the file being beautified is visible, or workspace/user setting if it is not visible. (Beautify of a non-visible file can be envoked when beautify on save is enabled.)
+* Beautify with no .jsbeautifyrc file in path tree will use workspace settings for tabs/spaces indent. [Issue #11](https://github.com/HookyQR/VSCodeBeautify/issues/11)<br>Will use the editor setting if the file being beautified is visible, or workspace/user setting if it is not visible. (Beautify of a non-visible file can be invoked when beautify on save is enabled.)
 * Allow beautify on save to work with types in `beautify.*Files` settings. [Issue #9](https://github.com/HookyQR/VSCodeBeautify/issues/9)
 * Fix `beautify.*Files` settings requiring a `.` before the extension (both styles are now accepted).
 * Add beautify on save option. [Issue #5: Add Beautify on Save](https://github.com/HookyQR/VSCodeBeautify/issues/5)
